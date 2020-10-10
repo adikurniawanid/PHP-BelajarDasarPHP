@@ -28,16 +28,16 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
             <th>Aksi</th>
         </tr>
         <?php $i = 1; ?>
-        <?php foreach ($mahasiswa as $mhs) : ?>
+        <?php foreach ($mahasiswa as $row) : ?>
             <tr>
                 <td><?= $i ?></td>
-                <td><img src="img/<?= $mhs["poto"]; ?> " alt=""></td>
-                <td><?= $mhs["nama"]; ?></td>
-                <td><?= $mhs["nim"]; ?></td>
-                <td><?= $mhs["jurusan"]; ?></td>
-                <td><?= $mhs["email"]; ?></td>
-                <td><a href="ubah.php?id=<?= $mhs["id"]; ?>">Edit</a> |
-                    <a href="hapus.php?id=<?= $mhs["id"]; ?>" onclick="return confirm('Yakin menghapus data')">Hapus</a></td>
+                <td><img src="img/<?= $row["poto"]; ?> " alt=""></td>
+                <td><?= $row["nama"]; ?></td>
+                <td><?= $row["nim"]; ?></td>
+                <td><?= $row["jurusan"]; ?></td>
+                <td><?= $row["email"]; ?></td>
+                <td><a href="ubah.php?id=<?= $row["id"]; ?>">Edit</a> |
+                    <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin menghapus data')">Hapus</a></td>
             </tr>
             <?php $i++ ?>
         <?php endforeach ?>
